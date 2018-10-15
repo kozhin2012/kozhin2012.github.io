@@ -1,1 +1,73 @@
-<div>Test1</div>
+<style>
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+#preloader {
+  background: #fff;
+  width: 150vw;
+  height: 150vh;
+}
+p {
+  position: absolute;
+  z-index: 101;
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 13px;
+  display: block;
+  right: 0;
+  bottom: 0;
+  margin: 12px;
+  opacity: .3;
+}
+.gradient {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  background: -moz-radial-gradient(center, ellipse cover, rgba(255,0,0,0) 0%, rgba(201,40,40,0.99) 99%, rgba(201,40,40,1) 100%);
+background: -webkit-radial-gradient(center, ellipse cover, rgba(255,0,0,0) 0%,rgba(201,40,40,0.99) 99%,rgba(201,40,40,1) 100%);
+background: radial-gradient(ellipse at center, rgba(255,0,0,0) 0%,rgba(201,40,40,0.99) 99%,rgba(201,40,40,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ff0000', endColorstr='#c92828',GradientType=1 );
+}
+#img {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  background-image: url(https://pp.userapi.com/c639528/v639528028/17f58/_pqBxAV55Sg.jpg);
+  background-repeat: repeat;
+  background-position: center center;
+  animation: eba .013s infinite;
+}
+@keyframes eba {
+  0% {transform: scale(1);}
+  50% {transform: scale(1.07);}
+  100% {transform: scale(1);}
+}
+</style>
+
+
+<div id="preloader"></div>
+<p>Играет Naked City – Bonehead</p>
+<div class="gradient"></div>
+<div id="img"></img>
+<audio src="http://zheludkov.red/eba/Naked-City-Bonehead.mp3" autoplay loop preload></audio>
+
+
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+<script>
+  $(window).on('load', function () {
+    var $preloader = $('#preloader');
+    $preloader.delay(400).fadeOut('fast');
+});
+  </script>
+
+
+
